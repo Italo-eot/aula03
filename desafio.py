@@ -3,7 +3,7 @@ nome_valido = False
 salario_valido = False
 bonus_valido = False
 
-while not nome_valido:
+while nome_valido is not True:
     try:
         nome_funcionario = input("Digite o seu nome: ")
         # Verifica se o nome foi preenchido
@@ -22,7 +22,7 @@ while not nome_valido:
     except ValueError as e:
         print(e)
 
-while not salario_valido:
+while salario_valido is not True:
     # Verificação para inserção de salários
     try:
         salario = float(input("Digite o seu salário: "))
@@ -36,7 +36,7 @@ while not salario_valido:
 
     # Verificação para inserção de Bônus
 
-while not bonus_valido:
+while bonus_valido is not True:
     try:
         bonus = float(input("Digite o percentual de bonus: "))
         if bonus < 0:
